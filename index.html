@@ -6,10 +6,9 @@
     <title>Art Gallery</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="main-layout">
-      <header>
+      <header class="header">
         <div class="main-logo">Art Gallery</div>
         <nav class="nav">
           <ul>
@@ -17,19 +16,21 @@
             <li><a href="#">Artists</a></li>
             <li><a href="#">Auctions</a></li>
             <li><a href="#">News</a></li>
+            <input
+              class="search"
+              type="search"
+              placeholder="Search"
+              name="search"
+              id="search"
+            />
           </ul>
-          <input
-            class="search"
-            type="search"
-            placeholder="Search"
-            name="search"
-            id="search"
-          />
         </nav>
         <nav class="nav">
           <ul>
             <li><a href="#">Sell</a></li>
-            <li><a href="pages/login" target="_blank">Login</a></li>
+            <li>
+              <a class="btn" href="src/pages/login" target="_blank">Login</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -89,16 +90,16 @@
             <li>College</li>
           </ul>
         </div>
+        <footer>
+          <p>&copy;2024 Ebrahim Khalil. All rights reserved.</p>
+        </footer>
       </aside>
       <div class="main">
-        <div>one</div>
-        <div>two</div>
-        <div>three</div>
-        <div>four</div>
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
       </div>
-      <footer>
-        <p>Copyright &copy;2024 Ebrahim Khalil. All rights reserved.</p>
-      </footer>
     </div>
   </body>
 </html>

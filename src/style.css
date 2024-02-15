@@ -1,51 +1,111 @@
 @font-face {
   font-family: virgil;
-  src: url(../assests/fonts/Virgil.woff2);
+  src: url(./assests/fonts/Virgil.woff2) format("woff2");
 }
-
 :root {
-  --background: #ffffff;
-  --text: #333333;
-  --primary: #333333;
-  --secondary: #666666;
-  --accent: #333333;
-  --border: #cccccc;
+  --clr-background: #ffffff;
+  --clr-text: #333333;
+  --clr-primary: #333333;
+  --clr-secondary: #666666;
+  --clr-accent: #333333;
+  --clr-border: #cccccc;
 
   --font-primary: virgil;
 }
-
 * {
-  /* reset default behavior */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
   font-family: var(--font-primary);
 }
-
 h1,
 h2,
 h3 {
-  color: var(--primary);
+  color: var(--clr-primary);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-text);
 }
 
-
 /* ********************* main layout ********************* */
+.main-layout {
+  display: grid;
+  grid-template-columns: 2rem 15rem 1fr 2rem;
+  grid-template-rows: 4rem 1fr;
+}
 
+/* ********************* header ********************* */
+.header {
+  grid-column: 2/-2;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-background);
+}
+.main-logo {
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+}
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.btn {
+  padding: 4px 10px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+}
+.btn:hover {
+  background: var(--clr-border);
+}
+/* ********************* sidebar ********************* */
+.sidebar {
+  grid-column: 2/3;
+  grid-row: 2/-1;
+  border-right: 1px solid var(--clr-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+}
+.sidebar-item {
+  margin-bottom: 1rem;
+}
+.sidebar-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.sidebar-item ul {
+  margin-left: 1rem;
+}
 
-/* ********************* Start > header ********************* */
-
-/* ********************* End > header ********************* */
-/* ********************* Start > sidebar ********************* */
-
-/* ********************* End > sidebar ********************* */
-/* ********************* Start > main ********************* */
-
-/* ********************* End > main ********************* */
-/* ********************* Start > footer ********************* */
-
-/* ********************* End > footer ********************* */
+/* ********************* main ********************* */
+.main {
+  grid-column: 3/-2;
+  grid-row: 2/-1;
+}
+.one,
+.two,
+.three,
+.four {
+  background: var(--clr-border);
+  height: 100dvh;
+}
